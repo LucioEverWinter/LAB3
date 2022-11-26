@@ -13,11 +13,11 @@
 #define RESET 0
 #define MODE_1 1
 #define MODE_2 2
-#define MODI_2 20
+//#define MODI_2 20
 #define MODE_3 3
-#define MODI_3 30
+//#define MODI_3 30
 #define MODE_4 4
-#define MODI_4 40
+//#define MODI_4 40
 
 extern int state;
 

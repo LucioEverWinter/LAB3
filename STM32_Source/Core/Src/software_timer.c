@@ -41,7 +41,7 @@ void timer_run(){
 	}
 
 	if(timer2_counter > 0){
-			timer2_counter--;
-			if(timer2_counter == 0) timer2_flag = 1;
-		}
+		timer2_counter--;
+		if(timer2_counter == 0) timer2_flag = 1;
+	}
 }

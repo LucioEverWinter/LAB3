@@ -97,16 +97,48 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   state = 0;
+  int led_idx = 0;
   int index = 0;
-  setTimer0(10);
+  setTimer0(1000);
+  //setTimer1(250);
   while (1)
   {
 
 	  if (timer0_flag == 1) {
-		  update7SEG(index);
-		  index++;
-		  if (index == 2) index = 0;
-		  setTimer0(500);
+		  switch (led_idx) {
+			  case 0:
+				led_idx++;
+			    break;
+		  	  case 1:
+		  		index = 1;
+		  		update7SEG(index);
+		  		setTimer0(500);
+		  		led_idx = 2;
+		  		break;
+		  	  case 2:
+		  		led_idx++;
+		  		break;
+		  	  case 3:
+		  		index = 2;
+				update7SEG(index);
+				setTimer0(500);
+				led_idx = 0;
+				break;
+		  	  default:
+		  		break;
+
+		  }
+	//	  if (index == 1) {
+
+	//		  index = 2;
+
+	//	  }
+
+	//	  if (index == 2) {
+	//		  update7SEG(index);
+	//		  index = 1;
+	//		  setTimer0(1000);
+	//	  }
 	  }
 	  fsm_run();
     /* USER CODE END WHILE */
