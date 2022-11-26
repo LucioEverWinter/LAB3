@@ -1,17 +1,17 @@
 /*
  * fsm.h
  *
- *  Created on: Nov 15, 2022
- *      Author: BIN
+ *  Created on: Nov 20, 2022
+ *      Author: Admin
  */
 
 #ifndef INC_FSM_H_
 #define INC_FSM_H_
 
-#include "global.h"
-#include "button.h"
 #include "main.h"
 #include "software_timer.h"
+#include "global.h"
+#include "button.h"
 
 void fsm_run();
 

@@ -1,8 +1,8 @@
 /*
  * global.h
  *
- *  Created on: Nov 15, 2022
- *      Author: BIN
+ *  Created on: Nov 20, 2022
+ *      Author: Admin
  */
 
 #ifndef INC_GLOBAL_H_
@@ -11,23 +11,26 @@
 #include "main.h"
 
 #define RESET 0
-#define STATE_MODE_1 1
-#define STATE_MODE_2 2
-#define STATE_MODE_3 3
-#define STATE_MODE_4 4
+#define MODE_1 1
+#define MODE_2 2
+#define MODI_2 20
+#define MODE_3 3
+#define MODI_3 30
+#define MODE_4 4
+#define MODI_4 40
 
-extern int status;
+extern int state;
 
+extern int time7SEG;
 extern int time7SEG0;
-extern int time7SEG1;
 
-extern int timeRed;
-extern int timeGreen;
-extern int timeYellow;
+extern int timeRED;
+extern int timeGREEN;
+extern int timeYELLOW;
 
-extern int SEG_buffer[4];
+extern int led_buffer[4];
 
-void updateSEGBuffer(int s0, int s1, int s2, int s3);
+void updateClockBuffer(int num0, int num1, int num2, int num3);
 void update7SEG(int index);
 
 #endif /* INC_GLOBAL_H_ */

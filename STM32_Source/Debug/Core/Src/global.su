@@ -1,0 +1,4 @@
+../Core/Src/global.c:10:6:display7SEG	16	static
+../Core/Src/global.c:106:6:display7SEG0	16	static
+../Core/Src/global.c:216:6:updateClockBuffer	24	static
+../Core/Src/global.c:223:6:update7SEG	16	static
